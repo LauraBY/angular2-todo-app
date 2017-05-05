@@ -10,8 +10,8 @@ header {
     color: white;
 }
 
-header img {
-    width: 50px;
+.head-icon {
+    color: rgba(185, 27, 16, 0.72);
 }
 
 header h1 {
