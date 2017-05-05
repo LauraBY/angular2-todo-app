@@ -1,0 +1,9 @@
+<header>
+    <img src="logo.png"/>
+    <h1>{{ title }}</h1>
+</header>
+
+<main>
+    <todo-form (add)="addTodoItem()"></todo-form>
+    <todo-list [count]="count"></todo-list>
+</main>
