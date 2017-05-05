@@ -1,0 +1,9 @@
+<div class="todo-list" *ngIf="todos.length">
+    <todo-item *ngFor="let todo of todos" [todo]="todo"
+      (delete)="delete($event)"
+      (toggle)="toggle($event)"
+      (update)="updateCount()"
+      (rename)="rename($event)"></todo-item>
+
+    <todo-status [count]="count"></todo-status>
+</div>

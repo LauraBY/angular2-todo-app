@@ -1,0 +1,15 @@
+<div class="todo-item" [ngClass]="{ 'completed': todo.completed }">
+    <button class="checkbox icon" (click)="onToggle()">
+      <i class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</i>
+    </button>
+
+    <input *ngIf="editing" type="text" name="title" [(ngModel)]="todo.title"
+      (blur)="save()" (keyup.enter)="save()" />
+    <span *ngIf="!editing" class="title" (dblclick)="edit()">{{ todo.title }}</span>
+
+    <div class="actions">
+      <button class="delete icon" (click)="onDelete()">
+        <i class="material-icons">delete</i>
+      </button>
+    </div>
+</div>

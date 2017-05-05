@@ -1,0 +1,5 @@
+<form class="todo-form" (ngSubmit)="onSubmit(); todoForm.reset()" #todoForm="ngForm">
+  <button class="checkbox icon all"><i class="material-icons all">done_all</i></button>
+  <input type="text" name="title" [(ngModel)]="title" placeholder="What do you need to do?" autofocus required>
+  <button type="submit" [disabled]="todoForm.form.invalid">Add</button>
+</form>
